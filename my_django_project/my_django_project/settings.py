@@ -50,9 +50,9 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'rest_framework',
     'users',
-    'games',
-    'posts',
-    'orders',
+    'booking',
+    'car',
+    'car_feature',
     'payments',
 ]
 

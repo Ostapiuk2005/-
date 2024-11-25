@@ -45,10 +45,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     
-    path('api/', include('games.urls')),
-    path('api/', include('orders.urls')),
+    path('api/', include('booking.urls')),
+    path('api/', include('car.urls')),
+    path('api/', include('car_feature.urls')),
     path('api/', include('payments.urls')),
-    path('api/', include('posts.urls')),
     path('api/', include('users.urls')),
 
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),

@@ -9,19 +9,19 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('booking', '0001_initial'),
+        ('car', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Payment',
+            name='Booking',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('payment_data', models.DateTimeField(auto_now_add=True)),
-                ('amount', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('payment_method', models.CharField(max_length=100)),
+                ('start_date', models.DateField(auto_now_add=True)),
+                ('end_date', models.DateField(auto_now_add=True)),
+                ('total_price', models.DecimalField(decimal_places=2, max_digits=10)),
                 ('status', models.BooleanField(default=False)),
-                ('booking_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='booking.booking')),
+                ('car_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='car.car')),
             ],
         ),
     ]

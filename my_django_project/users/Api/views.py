@@ -1,35 +1,8 @@
-from rest_framework import viewsets, generics
+from rest_framework import generics
 from users.models.user import CustomUser
 from users.serializer.users import CustomUserSerializer
 from rest_framework.permissions import IsAdminUser
 from drf_spectacular.utils import extend_schema
-
-
-# використання viewset
-# class UserViewSet(viewsets.ModelViewSet):
-#     queryset = CustomUser.objects.all()
-#     serializer_class = CustomUserSerializer
-
-#     # отримання списку всіх користувачів
-#     def list(self, request, *args, **kwargs):
-#         return super().list(request, *args, **kwargs)
-    
-#     # отримання деталей про конкретного користувача
-#     def retrieve(self, request, *args, **kwargs):
-#         return super().retrieve(request, *args, **kwargs)
-    
-#     # створення нового користувача
-#     def create(self, request, *args, **kwargs):
-#         return super().create(request, *args, **kwargs)
-
-#     # оновлення даних про користувача  
-#     def update(self, request, *args, **kwargs):
-#         return super().update(request, *args, **kwargs)
-
-#     # видалення користувача
-#     def destroy(self, request, *args, **kwargs):
-#         return super().destroy(request, *args, **kwargs)
-
 
 
 @extend_schema(summary="отримання списку всіх користувачів")

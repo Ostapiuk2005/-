@@ -1,1 +1,0 @@
-from orders.admin.order import OrderAdmin

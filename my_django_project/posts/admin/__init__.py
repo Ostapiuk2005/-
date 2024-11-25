@@ -1,1 +1,0 @@
-from posts.admin.post import PostAdmin
